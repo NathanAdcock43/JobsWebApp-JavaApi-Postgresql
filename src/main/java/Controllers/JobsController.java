@@ -9,8 +9,12 @@ import models.Job;
 @RestController @CrossOrigin( origins = "http://localhost:4200")
 public class JobsController {
 
+
+    private final JobsService jobsService;
     @Autowired
-    private JobsService jobsService;
+    public JobsController(JobsService jobsService) {
+        this.jobsService = jobsService;
+    }
 
     private ResponseEntity<Long> postNewJob(@PathVariable Long jobId){
 
