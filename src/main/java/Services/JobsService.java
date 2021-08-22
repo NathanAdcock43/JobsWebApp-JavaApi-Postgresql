@@ -3,6 +3,8 @@ package Services;
 import models.Job;
 import org.springframework.stereotype.Service;
 
+//This interface is like a menu of all the tasks that can be done
+//in this instance specifically interacting with jobs
 @Service
 public interface JobsService {
 

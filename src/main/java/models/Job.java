@@ -2,6 +2,9 @@ package models;
 
 import javax.persistence.*;
 
+//This model establishes the shape of the Jobs object and the way
+// that the data for the objects are stored in the DataBase
+
 @Entity
 @Table(name = "jobs")
 public class Job {
@@ -34,10 +37,6 @@ public class Job {
 //    public Job(String jobName, String jobStatus) {
 //        this.jobName = jobName;
 //        this.jobStatus = jobStatus;
-//    }
-//
-//    public Job() {
-//
 //    }
 
     public Long getId() {

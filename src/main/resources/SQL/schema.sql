@@ -1,3 +1,5 @@
+
+-- I put this here so that the database could have some data to interact with
 CREATE DATABASE jobexercises;
 
 CREATE TABLE IF NOT EXISTS jobs

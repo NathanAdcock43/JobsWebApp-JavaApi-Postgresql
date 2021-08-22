@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import repositories.JobsRepository;
 
+
+//This is the business layer, where the mechanism for doing different tasks
+//are defined
 @Service
 public class JobsServiceImpl implements JobsService{
 
