@@ -9,17 +9,13 @@ import models.Job;
 @RestController @CrossOrigin( origins = "http://localhost:4200")
 public class JobsController {
 
-
-    private final JobsService jobsService;
     @Autowired
-    public JobsController(JobsService jobsService) {
-        this.jobsService = jobsService;
-    }
+    private JobsService jobsService;
 
-    private ResponseEntity<Long> postNewJob(@PathVariable Long jobId){
-
-        return ResponseEntity.ok(jobsService.fetchJob(jobId));
-    }
+//    private ResponseEntity<Long> postNewJob(@PathVariable Long jobId){
+//
+//        return ResponseEntity.ok(jobsService.fetchJob(jobId));
+//    }
 
     @GetMapping("/jobs/{jobId}")
     public ResponseEntity<Job> getJob(@PathVariable Long jobId){
