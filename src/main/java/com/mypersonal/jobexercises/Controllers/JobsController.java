@@ -4,8 +4,11 @@ package com.mypersonal.jobexercises.Controllers;
 import com.mypersonal.jobexercises.Services.JobsService;
 import com.mypersonal.jobexercises.models.Job;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 //The controllers layer indicates which frontend endpoints correspond
@@ -22,11 +25,11 @@ public class JobsController {
         return ResponseEntity.ok(jobsService.createNewJob(job));
     }
 
-//    @GetMapping("/all")
-//    public ResponseEntity<List<Job>> getAllJobs(){
-//        List<Job> jobs = jobsService.findAllJobs;
-//        return new ResponseEntity<>(jobs, HttpStatus.OK);
-//    }
+    @GetMapping("/jobs")
+    public ResponseEntity<List<Job>> getAllJobs(){
+        List<Job> jobs = jobsService.findAllJobs();
+        return new ResponseEntity<>(jobs, HttpStatus.OK);
+    }
 
 
     @GetMapping("/jobs/{jobId}")

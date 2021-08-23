@@ -12,32 +12,11 @@ public class Job {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-//    @SequenceGenerator(
-//            name = "job_sequence",
-//            sequenceName = "job_sequence",
-//            allocationSize = 1
-//    )
-//    @GeneratedValue(
-//            strategy = GenerationType.SEQUENCE,
-//            generator = "job_sequence"
-//    )
-
     private Long id;
 
     private String jobName;
 
     private String jobStatus;
-
-//    public Job(Long id, String jobName, String jobStatus) {
-//        this.id = id;
-//        this.jobName = jobName;
-//        this.jobStatus = jobStatus;
-//    }
-//
-//    public Job(String jobName, String jobStatus) {
-//        this.jobName = jobName;
-//        this.jobStatus = jobStatus;
-//    }
 
     public Long getId() {
         return id;

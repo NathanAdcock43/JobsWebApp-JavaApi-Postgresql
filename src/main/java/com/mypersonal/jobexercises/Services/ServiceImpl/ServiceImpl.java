@@ -1,4 +1,4 @@
-package com.mypersonal.jobexercises.Services.serviceimpl;
+package com.mypersonal.jobexercises.Services.ServiceImpl;
 
 
 import com.mypersonal.jobexercises.Exceptions.JobNumberNotFoundException;
@@ -16,7 +16,7 @@ import java.util.List;
 //This is the business layer, where the mechanism for doing different tasks
 //are defined
 @Service
-public class JobsServiceImpl implements JobsService {
+public class ServiceImpl implements JobsService {
 
     @Autowired
     JobsRepository jobsRepository;
@@ -32,8 +32,8 @@ public class JobsServiceImpl implements JobsService {
         return jobsRepository.findById(id).orElseThrow(() -> new JobNumberNotFoundException(id));
     }
 
-//    @Override
-//    public List<Job> findAllJobs(){
-//        return JobsRepository.findAll();
-//    }
+    @Override
+    public List<Job> findAllJobs(){
+        return jobsRepository.findAll();
+    }
 }
