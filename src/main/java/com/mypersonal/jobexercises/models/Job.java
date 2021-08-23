@@ -1,4 +1,4 @@
-package models;
+package com.mypersonal.jobexercises.models;
 
 import javax.persistence.*;
 

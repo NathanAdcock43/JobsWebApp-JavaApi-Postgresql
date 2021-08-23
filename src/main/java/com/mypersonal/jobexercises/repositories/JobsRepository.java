@@ -1,6 +1,7 @@
-package repositories;
+package com.mypersonal.jobexercises.repositories;
 
-import models.Job;
+
+import com.mypersonal.jobexercises.models.Job;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
